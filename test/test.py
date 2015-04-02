@@ -76,11 +76,12 @@ def check_site(instance):
 })
 class PetClinicComponentTestCase(BaseComponentTestCase):
     name = "starter-java-web"
-    meta = "https://raw.githubusercontent.com/qubell-bazaar/starter-java-web/master/meta.yml"
+    meta = os.path.realpath(os.path.join(os.path.dirname(__file__), '../meta.yml')) 
     db_name = "petclinic"
+    destroy_interval = int(os.environ.get('DESTROY_INTERVAL', 1000*60*60*2))    
     apps = [{
         "name": name,
-        "settings": {"destroyInterval": 7200000},
+        "settings": {"destroyInterval": destroy_interval},
         "file": os.path.realpath(os.path.join(os.path.dirname(__file__), '../%s.yml' % name))
    }]
     @classmethod

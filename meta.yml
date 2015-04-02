@@ -9,7 +9,7 @@ kit:
     - name: "Load Balancer"
       manifest: https://raw.github.com/qubell-bazaar/component-haproxy/1.0-34p/component-haproxy.yml
     - name: "Application Server"
-      manifest: https://raw.github.com/qubell-bazaar/component-tomcat-dev/1.0-34p/component-tomcat-dev.yml
+      manifest: https://raw.github.com/qubell-bazaar/component-tomcat-dev/1.2-38p/component-tomcat-dev.yml
   provider:
     name: "Qubell"
     link: http://qubell.com
