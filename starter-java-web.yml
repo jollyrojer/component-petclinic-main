@@ -131,7 +131,7 @@ application:
                       action: mysql.schema
                       precedingPhases: [ get-env-props ]
                       parameters:
-                        commandCallTimeout: 5 minutes
+                        commandCallTimeout: 10 minutes
                         db-user: "{$.db-user}"
                         db-user-password: "{$.db-password}"
                         db-user-privileges: "{$.privileges}"
@@ -394,7 +394,7 @@ application:
               suggestions:
                   "centos": {image: "us-east-1/ami-bf5021d6", identity: root}
                   "amazon": {image: "us-east-1/ami-1ba18d72", identity: ec2-user}
-                  "ubuntu1204": {image: "us-east-1/ami-967edcff", identity: ubuntu}
+                  "ubuntu1204": {image: "us-east-1/ami-86452990", identity: ubuntu}
                   "ubuntu1004": {image: "us-east-1/ami-9f3906f6", identity: ubuntu}
           instance-size:
               type: configuration(string)
